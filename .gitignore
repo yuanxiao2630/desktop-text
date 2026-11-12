@@ -1,0 +1,19 @@
+# Generated applications, archives and compiler caches
+/dist/
+/.build/
+*.app/
+*.dSYM/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local notes and developer credentials
+notes.json
+notes-recovery-*.json
+.env
+.env.*
+*.p12
+*.p8
+*.mobileprovision
+*.key
+*.pem

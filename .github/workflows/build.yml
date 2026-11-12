@@ -1,0 +1,27 @@
+name: Build macOS app
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build and verify the application
+        run: python3 scripts/build.py
+      - name: Save application archive
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: desktop-text-macos-${{ runner.arch }}
+          path: dist/桌面文字.zip
+          if-no-files-found: error
+          retention-days: 14

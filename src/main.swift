@@ -23,7 +23,7 @@ struct SavedColor: Codable, Equatable {
 struct DesktopNote: Codable, Equatable, Identifiable {
     var id = UUID().uuidString
     var title = "我的桌面文字"
-    var text = "好好学习，天天向上"
+    var text = "理性干不过惯性"
     var fontFamily = "PingFang SC"
     var fontSize: Double = 36
     var bold = true

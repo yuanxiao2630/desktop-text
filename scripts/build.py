@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 def run(*args):
@@ -48,7 +48,7 @@ def main():
         "CFBundleExecutable": "DesktopText",
         "CFBundlePackageType": "APPL",
         "CFBundleShortVersionString": VERSION,
-        "CFBundleVersion": "1",
+        "CFBundleVersion": "2",
         "LSMinimumSystemVersion": "14.0",
         "LSUIElement": True,
         "NSHighResolutionCapable": True,
